@@ -1,5 +1,5 @@
 const path = require('path');
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const { VueLoaderPlugin } = require('vue-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -23,9 +23,9 @@ module.exports = {
     })
   ],
   devServer: {
-    contentBase: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
-    inline: true,
+    static: {
+      directory: path.resolve(__dirname, 'dist')
+    },
     hot: true,
     port: 3001,
   },
@@ -53,10 +53,5 @@ module.exports = {
         ]
       }
     ]
-  },
-  resolve: {
-    alias: {
-      'vue$': 'vue/dist/vue.common.js'
-    }
   }
 };
