@@ -10,7 +10,7 @@
     "serve": "webpack && webpack serve --open"
   },
   "devDependencies": {
-    "@babel/core": "^8.1.0",
+    "@babel/core": "^8.1.2",
     "@babel/preset-env": "^8.0.7",
     "@vue/compiler-sfc": "^3.5.45",
     "babel-loader": "^10.1.1",
